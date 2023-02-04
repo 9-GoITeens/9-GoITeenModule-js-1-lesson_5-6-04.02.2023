@@ -10,13 +10,15 @@ const x1 = 10;
 const x2 = 30;
 const number = 50;
 
-// console.log(`Число ${number} попадає у відрізок до ${x1}`, );
+// console.log(`Число ${number} попадає у відрізок до ${x1}`, number < x1);
 
-// console.log(`Число ${number} попадає у відрізок після ${x2}`, );
+// console.log(`Число ${number} попадає у відрізок після ${x2}`, number > x2);
 
-// console.log(`Число ${number} попадає у відрізок до ${x1} до ${x2}`, );
+const res1 = number > x1 && number < x2;
+// console.log(`Число ${number} попадає у відрізок до ${x1} до ${x2}`,res1);
 
-// console.log(`Число ${number} попадає у відрізок до ${x1} або після ${x2}`, );
+const res2 = number < x1 || number > x2;
+// console.log(`Число ${number} попадає у відрізок до ${x1} або після ${x2}`,res2);
 
 
 // ......................
@@ -34,7 +36,7 @@ const isOnline = true;
 const isFriend = true;
 const isDnd = false;
 
-// const canOpenChat = ;
+const canOpenChat = isOnline && isFriend && !isDnd;
 // console.log('Можна відкрити чат?', canOpenChat);
 // ..........................
 
@@ -47,7 +49,7 @@ const isDnd = false;
 */
 const sub = "pro";
 
-// const canAccessContent = ;
+const canAccessContent = sub === "pro" || sub === "vip";
 // console.log("Є доступ до контенту?", canAccessContent);
 // ...........................
 
